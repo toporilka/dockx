@@ -9,4 +9,4 @@ class ClientSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta():
         model = User
-        fields = ['email_user','password_user','tag_user']
+        fields = ['id_user','email_user','password_user','tag_user']

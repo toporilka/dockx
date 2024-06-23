@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from rest_framework import viewsets
 
 from logining.models import User, Client
@@ -15,3 +16,6 @@ class ClientControllesApi(viewsets.ModelViewSet):
      serializer_class = ClientSerializer
 
 # ---------------views-------------------
+def login(request):
+     if request == 'POST':
+          tag_user = request.POST.get()
