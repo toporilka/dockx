@@ -9,8 +9,6 @@ class UserControllesApi(viewsets.ModelViewSet):
      queryset = User.objects.all()
      serializer_class = UserSerializer
 
-
-
 class ClientControllesApi(viewsets.ModelViewSet):
      queryset = Client.objects.all()
      serializer_class = ClientSerializer
