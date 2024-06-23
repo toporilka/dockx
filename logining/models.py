@@ -30,7 +30,6 @@ class Client(models.Model):
                                    null=False)
     id_user = models.ForeignKey('User',
                                 null=False,
-                                unique=True,
                                 on_delete=models.CASCADE)
     status = models.CharField(max_length=40,
                             default="Не в работе",

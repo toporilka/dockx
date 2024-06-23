@@ -3,7 +3,8 @@ from rest_framework import viewsets
 
 from logining.models import User, Client
 from logining.serializers import UserSerializer, ClientSerializer
-# Create your views here.
+
+
 # ----------------api--------------------
 class UserControllesApi(viewsets.ModelViewSet):
      queryset = User.objects.all()
@@ -12,3 +13,5 @@ class UserControllesApi(viewsets.ModelViewSet):
 class ClientControllesApi(viewsets.ModelViewSet):
      queryset = Client.objects.all()
      serializer_class = ClientSerializer
+
+# ---------------views-------------------
