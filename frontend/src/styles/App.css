@@ -1,13 +1,25 @@
-* {
+.navbar{
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: lightseagreen;
+}
+.navbar__links{
+    margin-left: auto ;
+}
+.ul{
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-#root{
-    display: flex;
-    justify-content: center;
+li{
+    display: inline;
+    float: left;
 }
-
-.App{
-    width: 800px;
+.link{
+    padding: 20px;
+    text-align: center;
+    font-family: Arial;
 }

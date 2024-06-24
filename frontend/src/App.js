@@ -1,28 +1,44 @@
-import React, { useState } from 'react';
+import React from "react";
 import './styles/App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route, 
+  Link
+} from 'react-router-dom'
+import Logging from "./pages/Logging";
+import Main from "./pages/Main";
+import './styles/App.css'
+import {ReactComponent as Key} from './styles/key.svg'
+import {ReactComponent as Main_svg} from './styles/main.svg'
 
 function App(){
-  const [value, setValue] = useState('text_to_input')
 
-
-
-  return(
-    <div className='App'>
-      <div className='post'>
-        <div className='post_content'>
-          <strong>1. Java</strong>
-          <div>
-            Java govno
-          </div>
+ return(
+    <Router>
+    <div className="navbar">
+      <nav>
+        <div className="navbar__links">
+          <ul className="navbar_menu">
+            <li className="navbar_item">
+              <Link to = "/Logging" className="navbar_link"><Key></Key></Link>
+            </li>
+            <li className="navbar_link">
+              <Link to = "/Main" className="navbar_link"><Main_svg></Main_svg></Link>
+            </li>
+          </ul>
         </div>
-        <div className='post_button'>
-          <button>Fact</button>
-        </div>
-      </div>
+      </nav>
+      <Routes>
+        <Route path="/Logging" element={<Logging />}>
+        </Route>
+        <Route path="/Main" element = { <Main />}>
+        </Route>
+      </Routes>
     </div>
+    </Router>
   );
 }
 
+
 export default App;
-
-

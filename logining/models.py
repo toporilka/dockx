@@ -4,7 +4,7 @@ from django.db import models
 class User(models.Model):
     class Meta():
         verbose_name = 'Пользователи'
-        ordering = ['-id_user']
+        ordering = ['tag_user']
     id_user = models.IntegerField(null=False, primary_key=True, db_index=True)
     
     email_user = models.EmailField()
@@ -20,7 +20,7 @@ class User(models.Model):
     
 class Client(models.Model):
     class Meta():
-        verbose_name = 'Клиент'
+        verbose_name = 'Клиенты'
         ordering = ['-id_client']
     id_client = models.IntegerField(null=False, primary_key=True, db_index=True)
 

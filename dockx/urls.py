@@ -21,10 +21,11 @@ from rest_framework import routers
 from logining.views import UserControllesApi, ClientControllesApi
 
 router = routers.DefaultRouter()
-router.register(r'api/user', UserControllesApi, basename='User')
-router.register(r'api/client', ClientControllesApi, basename='Client')
+router.register(r'user', UserControllesApi, basename='User')
+router.register(r'client', ClientControllesApi, basename='Client')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('login/', include(router.urls))
 ]
