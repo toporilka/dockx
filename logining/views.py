@@ -16,6 +16,4 @@ class ClientControllesApi(viewsets.ModelViewSet):
      serializer_class = ClientSerializer
 
 # ---------------views-------------------
-def login(request):
-     if request == 'POST':
-          tag_user = request.POST.get()
+

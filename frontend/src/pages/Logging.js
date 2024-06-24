@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { BrowserRouter as Router } from "react-router-dom";
-import App from "../App";
+import '../styles/Logging.css'
+
 
 function Logging(){
     const [data,setData] = useState({email:"",tag:""});
@@ -26,7 +26,7 @@ function Logging(){
     return(
         <div>
             <h1>Logging</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="form_log">
                 <label>
                     ID:
                     <input className='ID'type="text" name="id_user" value={data.id_user} onChange={handleChange}></input>
@@ -46,6 +46,8 @@ function Logging(){
                     Tag:
                     <input className='Tag' type="text" name="tag_user" value={data.tag_user} onChange={handleChange}></input>
                 </label>
+                <br />
+                <button type="submit>" className="btn_log">Login</button>
             </form>
             {response && (
                 <p>Logging go: {response.id_user}({response.tag_user})</p>
@@ -54,4 +56,4 @@ function Logging(){
     )
 }
 
-export default Logging
+export default Logging;

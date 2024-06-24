@@ -1,0 +1,21 @@
+.form_log{
+    padding: 50px;
+    background: #ccc;
+    position: fixed; top: 50%; left: 50%;
+    --webkit-transofrm: translate(-50%, -50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+}
+.h1{
+    display: block;
+    text-align: center;
+    
+}
+.btn_log{
+    margin: 10px;
+    display:flex;
+    justify-content: center;
+    width: 170px;
+    height: 20px;
+    text-align: center;
+}
