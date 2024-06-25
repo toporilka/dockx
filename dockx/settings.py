@@ -56,7 +56,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'dockx.urls'
 
 
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 
